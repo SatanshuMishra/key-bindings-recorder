@@ -5,65 +5,69 @@ import { Image } from "astro:assets";
 
 <Layout title="Welcome to Astro.">
   <main class="p-4">
-    <img id="key-icon" src={`/images/A.svg`} alt={`Image`} />
+    <img
+      id="key-icon"
+      src={`/images/A.svg`}
+      alt={`Image`}
+      class="h-96 w-auto"
+    />
   </main>
 </Layout>
 
 <script>
-  window.onload = function () {
-    document.onkeydown = function (e) {
-      console.log(e.key);
-      const images = [
-        "A.svg",
-        "B.svg",
-        "C.svg",
-        "D.svg",
-        "E.svg",
-        "F.svg",
-        "G.svg",
-        "H.svg",
-        "I.svg",
-        "J.svg",
-        "K.svg",
-        "L.svg",
-        "M.svg",
-        "N.svg",
-        "O.svg",
-        "P.svg",
-        "Q.svg",
-        "R.svg",
-        "S.svg",
-        "T.svg",
-        "U.svg",
-        "V.svg",
-        "W.svg",
-        "X.svg",
-        "Y.svg",
-        "Z.svg",
-        "CONTROL.svg",
-        "SHIFT.svg",
-        // "ALT.svg",
-        "TAB.svg",
-      ];
-      for (let image of images) {
-        const key = image[0].toUpperCase();
-        if (e.key.toUpperCase() === key) {
-          document
-            .querySelector("#key-icon")
-            ?.setAttribute("src", `/images/${image}`);
-          break;
-        } else if (e.key === " ") {
-          document
-            .querySelector("#key-icon")
-            ?.setAttribute("src", `/images/SPACE.svg`);
-          break;
-        } else if (e.key === "Control") {
-          document
-            .querySelector("#key-icon")
-            ?.setAttribute("src", `/images/CONTROL.svg`);
-          break;
-        }
+  document.onkeydown = function (e) {
+    console.log(e.key);
+    const images = [
+      "A.svg",
+      "B.svg",
+      "C.svg",
+      "D.svg",
+      "E.svg",
+      "F.svg",
+      "G.svg",
+      "H.svg",
+      "I.svg",
+      "J.svg",
+      "K.svg",
+      "L.svg",
+      "M.svg",
+      "N.svg",
+      "O.svg",
+      "P.svg",
+      "Q.svg",
+      "R.svg",
+      "S.svg",
+      "T.svg",
+      "U.svg",
+      "V.svg",
+      "W.svg",
+      "X.svg",
+      "Y.svg",
+      "Z.svg",
+      "CONTROL.svg",
+      "SHIFT.svg",
+      // "ALT.svg",
+      "TAB.svg",
+    ];
+    for (let image of images) {
+      const key = image[0].toUpperCase();
+      if (e.key.toUpperCase() === key) {
+        document
+          .querySelector("#key-icon")
+          ?.setAttribute("src", `/images/${image}`);
+        break;
+      } else if (e.key === " ") {
+        document
+          .querySelector("#key-icon")
+          ?.setAttribute("src", `/images/SPACE.svg`);
+        break;
+      } else if (e.key === "Control") {
+        document
+          .querySelector("#key-icon")
+          ?.setAttribute("src", `/images/CONTROL.svg`);
+        break;
       }
-    };
+    }
   };
+  window.onload = function () {};
 </script>
