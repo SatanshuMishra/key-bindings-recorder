@@ -1,4 +1,5 @@
 {
   "editor.lineNumbers": "relative",
-  "editor.fontFamily": "'Monaspace Argon', monospace"
+  "editor.fontFamily": "'Monaspace Argon', monospace",
+  "terminal.integrated.fontFamily": "'Monaspace Krypton', monospace"
 }
